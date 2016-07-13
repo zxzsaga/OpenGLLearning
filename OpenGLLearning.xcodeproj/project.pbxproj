@@ -10,7 +10,7 @@
 		695824A31D34E9DD00F39E9E /* libGLEW.1.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 695824A21D34E9DD00F39E9E /* libGLEW.1.13.0.dylib */; };
 		695E311E1D34A31400A7A5B5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695E311D1D34A31400A7A5B5 /* OpenGL.framework */; };
 		695E31221D34D61C00A7A5B5 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695E31211D34D61C00A7A5B5 /* GLUT.framework */; };
-		69E19B1A1D364EE50063B60B /* Tutorial 01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 695824A41D34ED1800F39E9E /* Tutorial 01.cpp */; };
+		69E19B1E1D366BCD0063B60B /* Tutorial 04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +33,8 @@
 		695E31131D34A25300A7A5B5 /* OpenGLLearning */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGLLearning; sourceTree = BUILT_PRODUCTS_DIR; };
 		695E311D1D34A31400A7A5B5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		695E31211D34D61C00A7A5B5 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		69E19B1B1D3669E10063B60B /* Tutorial 03.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Tutorial 03.cpp"; sourceTree = "<group>"; };
+		69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Tutorial 04.cpp"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,8 @@
 				695824A61D34EF9600F39E9E /* math_3d.h */,
 				695824A41D34ED1800F39E9E /* Tutorial 01.cpp */,
 				695824AC1D35F1BE00F39E9E /* Tutorial 02.cpp */,
+				69E19B1B1D3669E10063B60B /* Tutorial 03.cpp */,
+				69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */,
 			);
 			path = OpenGLLearning;
 			sourceTree = "<group>";
@@ -134,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69E19B1A1D364EE50063B60B /* Tutorial 01.cpp in Sources */,
+				69E19B1E1D366BCD0063B60B /* Tutorial 04.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
