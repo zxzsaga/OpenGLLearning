@@ -1,43 +1,54 @@
 //
-//  Tutorial 04.cpp
+//  Tutorial  05.cpp
 //  OpenGLLearning
 //
-//  Created by Xuanzhi Zhang on 16/7/13.
+//  Created by Xuanzhi Zhang on 16/7/14.
 //  Copyright © 2016年 Xuanzhi Zhang. All rights reserved.
 //
 
 #include <stdio.h>
 #include <string.h>
+#include <assert.h>
+#include <math.h>
 #include <GL/glew.h>
 #include <GL/freeglut.h>
-#include <GLUT/GLUT.h>
 #include "math_3d.h"
+
 GLuint VBO;
+GLuint gScaleLocation;
 
 
-static const char* pVS = "                                                    \n\
-#version 330                                                                  \n\
+static const char* pVS = "                                                          \n\
+#version 330                                                                        \n\
 \n\
-layout (location = 0) in vec3 Position;                                       \n\
+layout (location = 0) in vec3 Position;                                             \n\
 \n\
-void main()                                                                   \n\
-{                                                                             \n\
-gl_Position = vec4(0.5 * Position.x, 0.5 * Position.y, Position.z, 1.0);  \n\
+uniform float gScale;                                                               \n\
+\n\
+void main()                                                                         \n\
+{                                                                                   \n\
+gl_Position = vec4(gScale * Position.x, gScale * Position.y, Position.z, 1.0);  \n\
 }";
 
-static const char* pFS = "                                                    \n\
-#version 330                                                                  \n\
+static const char* pFS = "                                                          \n\
+#version 330                                                                        \n\
 \n\
-out vec4 FragColor;                                                           \n\
+out vec4 FragColor;                                                                 \n\
 \n\
-void main()                                                                   \n\
-{                                                                             \n\
-FragColor = vec4(1.0, 0.0, 0.0, 1.0);                                     \n\
+void main()                                                                         \n\
+{                                                                                   \n\
+FragColor = vec4(1.0, 0.0, 0.0, 1.0);                                           \n\
 }";
 
 static void RenderSceneCB()
 {
     glClear(GL_COLOR_BUFFER_BIT);
+    
+    static float Scale = 0.0f;
+    
+    Scale += 0.001f;
+    
+    glUniform1f(gScaleLocation, sinf(Scale));
     
     glEnableVertexAttribArray(0);
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
@@ -54,6 +65,7 @@ static void RenderSceneCB()
 static void InitializeGlutCallbacks()
 {
     glutDisplayFunc(RenderSceneCB);
+    glutIdleFunc(RenderSceneCB);
 }
 
 static void CreateVertexBuffer()
@@ -127,15 +139,18 @@ static void CompileShaders()
     }
     
     glUseProgram(ShaderProgram);
+    
+    gScaleLocation = glGetUniformLocation(ShaderProgram, "gScale");
+    assert(gScaleLocation != 0xFFFFFFFF);
 }
 
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_3_2_CORE_PROFILE|GLUT_DOUBLE|GLUT_RGBA);
+    glutInitDisplayMode(GLUT_DOUBLE|GLUT_RGBA);
     glutInitWindowSize(1024, 768);
     glutInitWindowPosition(100, 100);
-    glutCreateWindow("Tutorial 04");
+    glutCreateWindow("Tutorial 05");
     
     InitializeGlutCallbacks();
     
