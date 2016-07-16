@@ -10,7 +10,8 @@
 		695824A31D34E9DD00F39E9E /* libGLEW.1.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 695824A21D34E9DD00F39E9E /* libGLEW.1.13.0.dylib */; };
 		695E311E1D34A31400A7A5B5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695E311D1D34A31400A7A5B5 /* OpenGL.framework */; };
 		695E31221D34D61C00A7A5B5 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695E31211D34D61C00A7A5B5 /* GLUT.framework */; };
-		69AA20751D37BB2E00FE88C2 /* Tutorial 04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */; };
+		9AEC03801D397FE0000149CF /* LoadShaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC037D1D397FE0000149CF /* LoadShaders.cpp */; };
+		9AEC03811D3A6333000149CF /* Tutorial 04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,6 +37,10 @@
 		69AA20731D37BAE500FE88C2 /* Tutorial 05.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Tutorial 05.cpp"; sourceTree = "<group>"; };
 		69E19B1B1D3669E10063B60B /* Tutorial 03.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Tutorial 03.cpp"; sourceTree = "<group>"; };
 		69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "Tutorial 04.cpp"; sourceTree = "<group>"; };
+		9AEC037B1D397FAB000149CF /* triangles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = triangles.cpp; sourceTree = "<group>"; };
+		9AEC037D1D397FE0000149CF /* LoadShaders.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoadShaders.cpp; sourceTree = "<group>"; };
+		9AEC037E1D397FE0000149CF /* LoadShaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadShaders.h; sourceTree = "<group>"; };
+		9AEC037F1D397FE0000149CF /* vgl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vgl.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +85,10 @@
 				69E19B1B1D3669E10063B60B /* Tutorial 03.cpp */,
 				69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */,
 				69AA20731D37BAE500FE88C2 /* Tutorial 05.cpp */,
+				9AEC037B1D397FAB000149CF /* triangles.cpp */,
+				9AEC037D1D397FE0000149CF /* LoadShaders.cpp */,
+				9AEC037E1D397FE0000149CF /* LoadShaders.h */,
+				9AEC037F1D397FE0000149CF /* vgl.h */,
 			);
 			path = OpenGLLearning;
 			sourceTree = "<group>";
@@ -140,7 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69AA20751D37BB2E00FE88C2 /* Tutorial 04.cpp in Sources */,
+				9AEC03811D3A6333000149CF /* Tutorial 04.cpp in Sources */,
+				9AEC03801D397FE0000149CF /* LoadShaders.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +260,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
+					"/Users/zxzsaga/Downloads/oglpg-8th-edition/include",
 					"$(inherited)",
-					/usr/local/Cellar/glew/1.13.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"/Users/zxzsaga/Downloads/oglpg-8th-edition/lib",
 					"$(inherited)",
-					/usr/local/Cellar/glew/1.13.0/lib,
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-lGLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -266,14 +276,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
+					"/Users/zxzsaga/Downloads/oglpg-8th-edition/include",
 					"$(inherited)",
-					/usr/local/Cellar/glew/1.13.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"/Users/zxzsaga/Downloads/oglpg-8th-edition/lib",
 					"$(inherited)",
-					/usr/local/Cellar/glew/1.13.0/lib,
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-lGLUT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

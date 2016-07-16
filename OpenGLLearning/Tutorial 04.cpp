@@ -14,7 +14,7 @@
 #include "math_3d.h"
 GLuint VBO;
 
-
+/*
 static const char* pVS = "                                                    \n\
 #version 330                                                                  \n\
 \n\
@@ -34,6 +34,26 @@ void main()                                                                   \n
 {                                                                             \n\
 FragColor = vec4(1.0, 0.0, 0.0, 1.0);                                     \n\
 }";
+*/
+
+static const char* pVS = {
+    "#version 330\n"
+    "layout (location = 0) in vec3 Position;"
+    "void main()"
+    "{"
+    "    gl_Position = vec4(0.5 * Position.x, 0.5 * Position.y, Position.z, 1.0);"
+    "}"
+};
+
+static const char* pFS = {
+    "#version 330\n"
+    "out vec4 FragColor;"
+    "void main()"
+    "{"
+    "    FragColor = vec4(1.0, 0.0, 0.0, 1.0);"
+    "}"
+};
+
 
 static void RenderSceneCB()
 {
