@@ -10,8 +10,8 @@
 		695824A31D34E9DD00F39E9E /* libGLEW.1.13.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 695824A21D34E9DD00F39E9E /* libGLEW.1.13.0.dylib */; };
 		695E311E1D34A31400A7A5B5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695E311D1D34A31400A7A5B5 /* OpenGL.framework */; };
 		695E31221D34D61C00A7A5B5 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695E31211D34D61C00A7A5B5 /* GLUT.framework */; };
+		69B508941D40DB300091081E /* triangles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC037B1D397FAB000149CF /* triangles.cpp */; };
 		9AEC03801D397FE0000149CF /* LoadShaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AEC037D1D397FE0000149CF /* LoadShaders.cpp */; };
-		9AEC03811D3A6333000149CF /* Tutorial 04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69E19B1D1D366BCD0063B60B /* Tutorial 04.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -149,8 +149,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AEC03811D3A6333000149CF /* Tutorial 04.cpp in Sources */,
 				9AEC03801D397FE0000149CF /* LoadShaders.cpp in Sources */,
+				69B508941D40DB300091081E /* triangles.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

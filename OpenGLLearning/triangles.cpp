@@ -16,14 +16,14 @@ enum VAO_IDs { Triangles, NumVAOs };
 enum Buffer_IDs { ArrayBuffer, NumBuffers };
 enum Attrib_IDs { vPosition = 0 };
 
-GLuint VAOs[VAO_IDs::NumVAOs];
-GLuint Buffers[Buffer_IDs::NumBuffers];
+GLuint VAOs[NumVAOs];
+GLuint Buffers[NumBuffers];
 
 const GLuint NumVertices = 6;
 
 void init(void) {
-    glGenVertexArrays(VAO_IDs::NumVAOs, VAOs);
-    glBindVertexArray(VAOs[VAO_IDs::Triangles]);
+    glGenVertexArrays(NumVAOs, VAOs);
+    glBindVertexArray(VAOs[Triangles]);
     
     GLfloat vertices[NumVertices][2] = {
         { -0.90, -0.90 },
